@@ -190,7 +190,6 @@ button:hover {
 .product__cart-button:hover {
   background-color: #228b22;
   transition: 1s linear;
-  
 }
 
 .catalog__sort-arrow {
@@ -209,6 +208,26 @@ button:hover {
 /* FORMS TO SEND  */
 .forms {
   max-width: 500px;
+}
+.form__body {
+  position: relative;
+}
+.form__body::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+mix-blend-mode: multiply;
+background:  url("/images/load.gif") center / 100px no-repeat ;
+opacity: 0;
+visibility: hidden;
+transition: all 0.5s ease 0s;
+}
+.form__body._sending::after{
+  opacity: 1;
+  visibility: visible;
 }
 form * {
   outline: none;
@@ -248,8 +267,9 @@ form * {
 .form__input:focus {
   box-shadow: 0 0 15px rgb(208, 224, 182);
 }
-.form__input ._error {
-  box-shadow: 0 0 15px  red;
+
+._error {
+  box-shadow: 0 0 12px red;
 }
 textarea.form__input {
   min-height: 120px;
@@ -261,6 +281,9 @@ textarea.form__input {
   align-items: center;
   margin: 0px auto;
 }
+/* 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
+
+/* 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
 
 .phone_form {
   max-width: 550px;
@@ -330,22 +353,21 @@ input#user_phone::-webkit-input-placeholder {
   opacity: 0;
 }
 .radio {
-padding-top: 1em;
-font-weight: 400;
-font-size: 18px;
-
+  padding-top: 1em;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 /* для элемента label связанного с .custom-radio */
-.custom-radio+label {
+.custom-radio + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
 /* создание в label псевдоэлемента  before со следующими стилями */
-.custom-radio+label::before {
-  content: '';
+.custom-radio + label::before {
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -360,43 +382,45 @@ font-size: 18px;
 }
 
 /* стили при наведении курсора на радио */
-.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
   border-color: #b3d7ff;
 }
 
 /* стили для активной радиокнопки (при нажатии на неё) */
-.custom-radio:not(:disabled):active+label::before {
+.custom-radio:not(:disabled):active + label::before {
   background-color: #b3d7ff;
   border-color: #b3d7ff;
 }
 
 /* стили для радиокнопки, находящейся в фокусе */
-.custom-radio:focus+label::before {
+.custom-radio:focus + label::before {
   box-shadow: 0 0 0 0.2rem rgba(0, 255, 85, 0.24);
 }
 
 /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-.custom-radio:focus:not(:checked)+label::before {
+.custom-radio:focus:not(:checked) + label::before {
   border-color: #80bdff;
 }
 
 /* стили для радиокнопки, находящейся в состоянии checked */
-.custom-radio:checked+label::before {
+.custom-radio:checked + label::before {
   border-color: #007914;
   background-color: #2e8b17;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 /* CHECK_BOX STYLE  */
-.checkbox{
-margin-top: 1.5em;
+.checkbox {
+  margin-top: 1.5em;
 }
 .checkbox__input {
-display: none;
+  display: none;
 }
-
 .checkbox__input:checked + .checkbox__label::after {
   transform: scale(1);
+}
+.checkbox._error.checkbox__label::before  {
+  box-shadow: 0 0 16px red;
 }
 .checkbox__label {
   font-size: 16px;
@@ -407,26 +431,25 @@ display: none;
   cursor: pointer;
 }
 .checkbox__label::before {
-content: "";
-align-self: flex-start;
-flex: 0 0 24px;
-height: 24px;
-background-color: rgb(231, 231, 231);
-border-radius: 4px;
-margin-right: 10px;
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: rgb(231, 231, 231);
+  border-radius: 4px;
+  margin-right: 10px;
 }
 .checkbox__label::after {
-content: "";
-transition: all 0.2s linear;
-width: 16px;
-height: 16px;
-position: absolute;
-top: 4px;
-left: 4px;
-background-color:#2e8b17;
-border-radius: 4px;
-transform: scale(0);
-
+  content: "";
+  transition: all 0.2s linear;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #2e8b17;
+  border-radius: 4px;
+  transform: scale(0);
 }
 .checkbox__label a {
   color: #007914;
@@ -445,30 +468,20 @@ transform: scale(0);
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 20px;text-transform: uppercase;
+  border-radius: 20px;
+  text-transform: uppercase;
   letter-spacing: 2px;
 
-  box-shadow:rgba(245, 243, 243, 0.548);
-  
+  box-shadow: rgba(245, 243, 243, 0.548);
 }
 .form__button:hover {
   transition: all 0.3s linear;
   background-color: #316e21;
 }
 .form__button:active {
-  top: 3px ;
+  top: 3px;
   box-shadow: none;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* END SUBMIT STYLE  */
 /* END FORMS TO SEND  */

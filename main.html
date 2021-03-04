@@ -52,7 +52,7 @@
       <section class="page__section slider">
         <!-- Slider main container -->
         <div class="swiper-container slider__container">
-          <!-- Additional required wrapper -->
+          <!-- Additional  wrapper -->
           <div class="swiper-wrapper slider__wrapper">
             <!-- Slides -->
             <div class="swiper-slide slider__slide">
@@ -186,15 +186,15 @@
           <form action="#" id="form" class="form__body">
             <div class="form__title_zag">Оставьте свои данные и мы вам перезвоним</div>
             <div class="form__item">
-              <label for="formName" class="form__label  _req" >Имя*:</label>
-              <input id="formName" type="text" name="name" class="form__input _req">
+              <label for="formName" class="form__label" >Имя*:</label>
+              <input id="formName"  placeholder="Иван " type="text" name="name" class="form__input _req ">
             </div> 
             <div class="form__item">
-              <label for="formEmail" class="form__label  _req  _email" >E-mail*:</label>
-              <input id="formEmail" type="text" name="email" class="form__input ">
+              <label for="formEmail" class="form__label     " >E-mail*:</label>
+              <input id="formEmail"  type="text" name="email" placeholder="primer@mail.ru" class="form__input _req _email  ">
               <label for="formEmail" class="form__label" >Телефон*:</label>
-                <div class="user_phone">
-                  <input type="tel" required pattern="[0-9_-]{10}" title="Формат: (999) 999 99 99" placeholder="(___) ___ __ __" id="user_phone" />	
+                <div class="user_phone ">
+                  <input class="_req" type="tel"  pattern="[0-9_-]{10}" title="Формат: (999) 999 99 99" placeholder="(___) ___ __ __" id="user_phone" />	
                 </div>             
             </div> 
             <div class="form__item">
@@ -202,12 +202,12 @@
               <div class="options">
                 <div class="options__item">
                   <div class="radio">
-                    <input class="custom-radio _req" type="radio" id="color-1" name="color" value="indigo">
+                    <input class="custom-radio " checked type="radio" id="color-1" name="color" value="indigo">
                     <label for="color-1">Оптом</label>
                   </div>
                 
                   <div class="radio">
-                    <input class="custom-radio _req" type="radio" id="color-2" name="color" value="red">
+                    <input class="custom-radio " type="radio" id="color-2" name="color" value="red">
                     <label for="color-2">В розницу</label>
                   </div>
                 </div>
@@ -217,12 +217,13 @@
               <label for="formMessage" class="form__label">Сообщение:</label>
               <textarea name="message" id="formMessage" class="form__input"></textarea>
               <div class="checkbox">
-                <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
-                <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных</span></label>
+                <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req ">
+                <label for="formAgreement" class="checkbox__label "><span>Я даю свое согласие на обработку персональных данных</span></label>
               </div>
             </div>
             <button type="submit" class="form__button">Отправить</button>
           </form>
+        
        </div>
       </sectiond>
       <section class="contacs">
@@ -274,10 +275,9 @@
         </div>
       </div>
     </footer>
-    <script src="/js/script.js" > </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="jquery.maskedinput.min.js"></script>
-    <!-- <script src="/libs/script_phone.js"></script> -->
+   
+    <script src="js/Validation/script.js"> </script>
+
     <script src="/js/libs/swiper.js"></script>
     <script src="/js/index.js"></script>
   </body>

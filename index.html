@@ -93,25 +93,25 @@
           <p>Сортировать по:</p>
           <button class="catalog__sort-button">
             рейтингу
-            <div class="catalog__sort-arrow catalog__sort-arrow_top">▲</div>
+            <div  class="catalog__sort-arrow catalog__sort-arrow_top">▲</div>
           </button>
-          <button class="catalog__sort-button">
+          <button id="price" class="catalog__sort-button">
             цене
-            <div class="catalog__sort-arrow catalog__sort-arrow_top">▲</div>
+            <div  class="catalog__sort-arrow catalog__sort-arrow_top">▲</div>
           </button>
-          <button class="catalog__sort-button">
+          <button  class="catalog__sort-button">
             массе
-            <div class="catalog__sort-arrow catalog__sort-arrow_bottom">▲</div>
+            <div class="catalog__sort-arrow catalog__sort-arrow_bottom ">▲</div>
           </button>
         </div>
       </section>
       <sectiond class="catalog">
         <div class="catalog_products">
-        <div class="catalog__item product">
+        <div class="catalog__item product" price="11200">
           <div class="image_wraper">
            <div class="product__image_three"><img src="images/product/Цветник_большой_черный_2.png" height="100%" width="100%"></div>
          </div>
-          <div class="product_pisition_item">
+          <div class="product_pisition_item" >
             <div class="product__header">
               <div class="product__name">
                Цветник черный с пропиткой 
@@ -120,16 +120,16 @@
               <div class="product__size">Масса: 210кг  </div>
             </div>
             <div class="product__body">
-              <span class="product__price">Цена - 12 000 Р</span>
-              <button class="product__cart-button">Заказать</button>
+              <span class="product__price">Цена - 11200 Р</span>
+              <button onclick="window.location.href = '#top'" class="product__cart-button">Заказать</button>
             </div>
           </div>
         </div>
-        <div class="catalog__item product">
+        <div class="catalog__item product" price="1">
           <div class="image_wraper">
            <div class="product__image_three"><img src="images/product/Цветник_большой_черный_2.png" height="100%" width="100%"></div>
          </div>
-          <div class="product_pisition_item">
+          <div class="product_pisition_item ">
             <div class="product__header">
               <div class="product__name">
                Цветник черный с пропиткой 
@@ -138,12 +138,12 @@
               <div class="product__size">Масса: 210кг  </div>
             </div>
             <div class="product__body">
-              <span class="product__price">Цена - 12 000 Р</span>
-              <button class="product__cart-button">Заказать</button>
+              <span class="product__price">Цена - 1</span>
+              <button onclick="window.location.href = '#top'" class="product__cart-button">Заказать</button>
             </div>
           </div>
         </div>
-        <div class="catalog__item product">
+        <div class="catalog__item product" price="340">
           <div class="image_wraper">
            <div class="product__image_three"><img src="images/product/Цветник_большой_черный_2.png" height="100%" width="100%"></div>
          </div>
@@ -156,12 +156,12 @@
               <div class="product__size">Масса: 210кг  </div>
             </div>
             <div class="product__body">
-              <span class="product__price">Цена - 12 000 Р</span>
-              <button class="product__cart-button">Заказать</button>
+              <span class="product__price">Цена - 340 Р</span>
+              <button onclick="window.location.href = '#top'" class="product__cart-button">Купить</button>
             </div>
           </div>
         </div>
-        <div class="catalog__item product">
+        <div class="catalog__item product" price="32">
           <div class="image_wraper">
            <div class="product__image_three"><img src="images/product/Цветник_большой_черный_2.png" height="100%" width="100%"></div>
          </div>
@@ -174,14 +174,15 @@
               <div class="product__size">Масса: 210кг  </div>
             </div>
             <div class="product__body">
-              <span class="product__price">Цена - 12 000 Р</span>
-              <button class="product__cart-button">Заказать</button>
+              <span class="product__price">Цена - 32 Р</span>
+              <button onclick="window.location.href = '#top'" class="product__cart-button">Заказать</button>
             </div>
           </div>
         </div>
       </div>
       </section>
       <section class="application_form">
+        <p><a name="top"></a></p>
         <div class="forms">
           <form action="#" id="form" class="form__body">
             <div class="form__title_zag">Оставьте свои данные и мы вам перезвоним</div>
@@ -275,8 +276,9 @@
         </div>
       </div>
     </footer>
-   
-    <script src="js/Validation/script.js"> </script>
+    <script src="/js/sorting.js"></script>
+    <script src="/js/rotate_buttons.js"></script>
+    <script src="/js/Validation/script.js"> </script>
     <script src="/js/libs/swiper.js"></script>
     <script src="/js/index.js"></script>
   </body>

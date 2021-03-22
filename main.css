@@ -35,6 +35,11 @@ h1 {
   background-color: rgba(245, 243, 243, 0.548);
 }
 .logo {
+  
+  background-image: url("/images/Logo.jpg ");
+  background-size: cover;
+  height: 100px;;
+  width:300px;
   mix-blend-mode: multiply;
 }
 .contacts {
@@ -44,9 +49,13 @@ h1 {
   display: flex;
 }
 .tel_icon {
-  padding-right: 1em;
+
   display: flex;
   align-items: center;
+  background-image: url("/images/telephone.svg ");
+  background-size: cover;
+  height: 55px;
+  width: 55px;
 }
 
 .inform {
@@ -57,6 +66,7 @@ h1 {
   margin: 2% auto;
   font-size: 0.9em;
   flex-direction: column;
+  padding-left: 1em;
 }
 .numb {
 }
@@ -145,10 +155,15 @@ h1 {
   height: 333px;
 }
 .product__image_three {
-  overflow: hidden;
+  /* overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  background-image: url("/images/product/Цветник_большой_черный_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 333px;
+  height: 333px;
 }
 .product_pisition_item {
   display: flex;
@@ -213,19 +228,19 @@ button:hover {
   position: relative;
 }
 .form__body::after {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-mix-blend-mode: multiply;
-background:  url("/images/load.gif") center / 100px no-repeat ;
-opacity: 0;
-visibility: hidden;
-transition: all 0.5s ease 0s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  background: url("/images/load.gif") center / 100px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
 }
-.form__body._sending::after{
+.form__body._sending::after {
   opacity: 1;
   visibility: visible;
 }
@@ -280,6 +295,9 @@ textarea.form__input {
   display: flex;
   align-items: center;
   margin: 0px auto;
+}
+.form__body {
+  margin-bottom: 1.5em;
 }
 /* 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 
@@ -419,7 +437,7 @@ input#user_phone::-webkit-input-placeholder {
 .checkbox__input:checked + .checkbox__label::after {
   transform: scale(1);
 }
-.checkbox._error.checkbox__label::before  {
+.checkbox._error.checkbox__label::before {
   box-shadow: 0 0 16px red;
 }
 .checkbox__label {
@@ -487,52 +505,64 @@ input#user_phone::-webkit-input-placeholder {
 /* END FORMS TO SEND  */
 
 /* CONTACS SECTION */
-.contacss {
-  margin: 2em auto;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-.map {
-  z-index: 1;
-}
-.contacss:hover {
-  background-color: rgb(233, 233, 233);
-  transition: linear 2s;
-}
 .contacts_information {
-  margin: 0 auto;
-  flex-direction: row;
-  align-items: center;
-  font-size: 2em;
-  font-weight: 50px;
-  letter-spacing: 0.05em;
-  z-index: 50;
+  position: absolute;
+  top: 6em;
+  right: 6em;
+  padding: 2em;
+  background: #fff;
+  border: 1px solid #ddd;
+  z-index: 100;
+
+  float: left;
+  font-size: 18px;
+  font-weight: 300;
 }
-.contacs_inform_txt:hover {
-  color: rgb(87, 87, 87);
-  transition: linear 0.5s;
+.contacss {
+  position: relative;
+}
+.contacs_inform_txt {
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contacs_inform_numbers {
-  padding: 0.4em 0 0 7em;
-}
-.contacs_inform_numbers:hover {
-  color: rgb(87, 87, 87);
-  transition: linear 0.5s;
-}
-.contacs_inform_mail {
-  padding: 0.4em 0 0 5em;
-}
-.contacs_inform_mail:hover {
-  color: rgb(87, 87, 87);
-  transition: linear 0.5s;
+  align-items: center;
+  display: flex;
+  margin: 0.5em 0 0.5em 0;
+
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 .contacs_inform_txt_mail {
-  padding: 0.4em 0 0 4em;
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.contacs_inform_txt_mail:hover {
-  color: rgb(87, 87, 87);
-  transition: linear 0.5s;
+.contacs_inform_mail {
+  align-items: center;
+  margin: 0.5em 0 0.5em;
+  display: flex;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contacs_inform_place {
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 /* END CONTACS SECTION */
@@ -557,6 +587,7 @@ hr {
   text-transform: uppercase;
 }
 .duble_text {
+  float: left;
 }
 .duble {
   margin: 0 auto;
@@ -566,7 +597,13 @@ hr {
   justify-content: space-between;
   font-size: 1.5em;
 }
-
+.inform_icons{
+  background-image: url("/images/product/Цветник_малый_красный_2.png");
+  mix-blend-mode: multiply;
+  width: 100em;
+  height: 18em;
+  background-size:contain;
+}
 /*END ABOUT US INFORM */
 
 /* FOOTER */
@@ -574,11 +611,17 @@ hr {
   background-color: rgb(248, 247, 247);
   display: flex;
   justify-content: space-around;
-  font-size: 1 em;
+  font-size: 1em;
 }
 .logo_inform {
   mix-blend-mode: multiply;
+  background-image: url("/images/Logo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 100px;
 }
+
 .footer_contacs {
   display: flex;
   align-items: center;

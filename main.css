@@ -4,6 +4,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #ececec;
   width: 100%;
+  
 }
 body {
   max-width: 1920px;
@@ -489,6 +490,7 @@ input#user_phone::-webkit-input-placeholder {
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: none;
 
   box-shadow: rgba(245, 243, 243, 0.548);
 }

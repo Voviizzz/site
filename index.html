@@ -12,15 +12,21 @@
     <link rel="stylesheet" type="text/css" href="/js/libs/swiper.css" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" type="text/css" href="mobile.css" />
+    <link rel="stylesheet" type="text/css" href="laptop.css" />
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
+   
       <div class="logo">
         <!-- <img src="/images/Logo.jpg" height="100px" /> -->
       </div>
+      <div class="menu-burger__header">
+        <span></span>
+    </div>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
@@ -31,6 +37,7 @@
           </li>
         </ul>
       </nav>
+    
       <div class="contacts">
         <!-- <div class="inform">
           <p>Сделать заказ можно</p>
@@ -140,7 +147,7 @@
               <div class="product__size">Масса: 210кг  </div>
             </div>
             <div class="product__body">
-              <span class="product__price">Цена - 880 ₽</span>
+              <span class="product__price">Цена - 1 ₽</span>
               <button onclick="window.location.href = '#top'" class="product__cart-button">Заказать</button>
             </div>
           </div>
@@ -269,7 +276,7 @@
     <footer>
       <div class="footer_items">
         <div class="logo_inform">
-          <img src="/images/Logo.jpg" width="300px" height="100px">
+        
         </div>
         <div class="footer_contacs">
           <div class="footer_text"> Справочная информация по телефонам:</div>
@@ -281,6 +288,8 @@
       </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/mobile.js"></script>
     <script src="/js/sorting.js"></script>
     <script src="/js/arrows.js"></script>
     <script src="/js/Validation/script.js"> </script>
